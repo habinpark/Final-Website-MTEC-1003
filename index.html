@@ -9,7 +9,9 @@
     <link href="images/HP.png" rel="icon">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,300&family=Major+Mono+Display&display=swap"     rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,400;1,300&family=Major+Mono+Display&display=swap"
+        rel="stylesheet">
 
 
 </head>
@@ -31,13 +33,17 @@
             var fps = 60; //refresh rate
             const pi = Math.PI;
             var CubeNumber;
+            var X = 350;
+            var Y = 350;
             var Frames = 0;
-            var X, Y, Width, Hieght;
+            var Width, Hieght;
             var Speeds = [];
             var rotateSpeed = 100;
+            var rotateAmount = 1.2;
+            var jump = 0;
             for (let i = 0; i < 68; i++) {
                 Speeds[i] = rotateSpeed;
-                rotateSpeed -= 1.2;
+                rotateSpeed -= rotateAmount;
             }
 
             function main() {
@@ -45,8 +51,10 @@
                 context = sketch.getContext("2d");
                 setInterval(animate, fps);
                 var EllipseNumber = 135;
-                X = 350;
-                Y = 350;
+                sketch.addEventListener("click", function (event) {
+                    jump += 10;
+                });
+
 
             }
 
@@ -67,7 +75,7 @@
                     context.fillStyle = "black";
                     var rotate = (Math.PI * (Mouse / 100));
                     context.beginPath();
-                    context.ellipse(X, Y, Width, Hieght, (Frames / Speeds[i]), 0, 2 * Math.PI, true);
+                    context.ellipse(X, Y, Width, Hieght, (Frames / Speeds[i])+jump, 0, 2 * Math.PI, true);
                     context.closePath();
                     context.fill();
                     context.strokeStyle = "#18FAFF";
@@ -100,7 +108,7 @@
     <div class="stuff" id="first">
         <h2>6 Games Made</h2>
         <h4>Unreal Engine, Unity, Processing, Bitsy</h4>
-        <h5><a href="https://hpplus.itch.io/" target="_blank">View Games</a>
+        <h5><a class="a" href="https://hpplus.itch.io/" target="_blank">View Games</a>
         </h5>
         <p>Games were created for Game Jams, Clubs, and School Projects.</p>
 
@@ -108,21 +116,22 @@
     <div class="stuff" id="second">
         <h2>11 Music Videos Animated</h2>
         <h4>Blender, Davinci Resolve</h4>
-        <h5><a href="https://www.youtube.com/channel/UCC3U2aQx3qS9rREsV5WEJEQ" target="_blank">View Videos</a></h5>
+        <h5><a class="a" href="https://www.youtube.com/channel/UCC3U2aQx3qS9rREsV5WEJEQ" target="_blank">View Videos</a>
+        </h5>
         <p>More than 2.5K views total on the videos. All were created using Procedurally animated meshes and materials
             that react to soundwaves</p>
     </div>
     <div class="stuff" id="third">
         <h2>3 Game Engines Learned</h2>
         <h4>Unreal Engine 4 & 5, Unity, Bitsy</h4>
-        <h5><a href="https://hpplus.itch.io/" target="_blank">View Games Made</a></h5>
+        <h5><a class="a" href="https://hpplus.itch.io/" target="_blank">View Games Made</a></h5>
         <p>I have learned to make games in Unreal Engine, Unity, and Bitsy. I am most confident in Unreal Engine, with 3
             of my games created in this engine.</p>
     </div>
     <div class="stuff" id="fourth">
         <h2>8 Programing Languages Learned</h2>
         <h4>C++, C#, Blueprints, Python, HTML, CSS, Java Script, Processing</h4>
-        <h5><a href="https://twitter.com/hhpplus" target="_blank">View Projects Made</a>
+        <h5><a class="a" href="https://twitter.com/hhpplus" target="_blank">View Projects Made</a>
         </h5>
         <p>I have coded robots in C++; games in C#, C++ and Blueprints; programs in python; websites in HTML, CSS, and
             Java Script; and Visual art in Processing.</p>
@@ -131,7 +140,7 @@
         <h2>14 Software Programs Learned</h2>
         <h4>Blender, Unreal Engine, Unity, EmberGen, Davinci Resolve, Reaper, Audition, Audacity, Premiere Pro, After
             Effects, Illustrator, Photoshop, Visual Studio, Visual Studio Code </h4>
-        <h5><a href="https://twitter.com/hhpplus" target="_blank">View Projects Made</a>
+        <h5><a class="a" href="https://twitter.com/hhpplus" target="_blank">View Projects Made</a>
         </h5>
         <p>I have learned many pieces of software to create my digital artwork. Learning new software is something that
             I have been good at.</p>

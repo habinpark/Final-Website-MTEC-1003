@@ -16,6 +16,12 @@ h4,
 h5,
 h6 {
     font-family: 'Josefin Sans', sans-serif;;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+}
+p {
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 }
 .sketch {
     padding-left: 0;
@@ -24,6 +30,7 @@ h6 {
     margin-right: auto;
     display: block;
     width: 800px;
+    
 }
 
 .hero-image {
@@ -50,6 +57,7 @@ h6 {
 #navbar {
     overflow: hidden;
     background-color: #0304E0;
+    
 }
 
 .navbarCenter{
@@ -65,11 +73,15 @@ h6 {
     text-align: center;
     padding: 14px;
     text-decoration: none;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 }
 
 #navbar a:hover {
     color: rgb(0, 58, 13);
     background-color: white;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
 }
 
 .sticky {
@@ -116,4 +128,9 @@ div#fourth {
 
 div#fifth {
     background-color: #38E0CF;
+}
+
+.a {
+    color: rgb(157, 212, 248);
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
 }
