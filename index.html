@@ -72,7 +72,7 @@
                 Frames++;
 
                 for (let i = 1; i < 68; i++) {
-                    context.fillStyle = "black";
+                    context.fillStyle = "#00000000";
                     var rotate = (Math.PI * (Mouse / 100));
                     context.beginPath();
                     context.ellipse(X, Y, Width, Hieght, (Frames / Speeds[i])+jump, 0, 2 * Math.PI, true);

@@ -2,7 +2,7 @@
 
 body,
 html {
-    background-color:  black;
+    
     height: 100%;
     font-family: 'Josefin Sans', sans-serif;;
     font-weight: 200;
@@ -55,7 +55,7 @@ p {
 
 #navbar {
     overflow: hidden;
-    background-color: #0304E0;
+    background-color: #0303e0a9;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
     width: 100%;
     z-index: 1;
@@ -113,31 +113,31 @@ div.stuff {
 }
 
 div#first {
-    background-color: #9D5FFA;
+    background-color: #9D5FFA6c;
 }
 
 div#second {
-    background-color: #4085F5;
+    background-color: #4085F56c;
 }
 
 div#third {
-    background-color: #26BAFF;
+    background-color: #26BAFF6c;
 }
 
 div#fourth {
-    background-color: #2FB5DE;
+    background-color: #2FB5DE6c;
 }
 
 div#fifth {
-    background-color: #38E0CF;
+    background-color: #38E0CF6c;
 }
 
 div#sixth {
-    background-color: #58F5A4;
+    background-color: #58F5A46c;
 }
 
 div#seventh {
-    background-color: #6FE074;
+    background-color: #6FE0746c;
 }
 
 .image > img{
@@ -150,4 +150,64 @@ div#seventh {
 .image:hover > img{
     filter: grayscale(0%);
     transform: scale(1.2);
+}
+
+body {
+    -webkit-animation: color-change-5x 8s linear infinite alternate both;
+    animation: color-change-5x 8s linear infinite alternate both;
+
+}
+
+/**
+* ----------------------------------------
+* animation color-change-5x
+* ----------------------------------------
+*/
+@-webkit-keyframes color-change-5x {
+    0% {
+        background: #020091;
+    }
+
+    25% {
+        background: #004c63;
+    }
+
+    50% {
+        background: #3b005e;
+    }
+
+    75% {
+        background: #005070;
+    }
+
+    100% {
+        background: #33016d;
+    }
+}
+
+@keyframes color-change-5x {
+    0% {
+        background: #020091;
+    }
+
+    25% {
+        background: #004c63;
+    }
+
+    50% {
+        background: #3b005e;
+    }
+
+    75% {
+        background: #005070;
+    }
+
+    100% {
+        background: #33016d;
+    }
+}
+
+p {
+    -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
