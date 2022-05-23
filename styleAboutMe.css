@@ -57,6 +57,8 @@ p {
     overflow: hidden;
     background-color: #0304E0;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    width: 100%;
+    z-index: 1;
 
 }
 
@@ -138,10 +140,14 @@ div#seventh {
     background-color: #6FE074;
 }
 
-.image {
-    filter: grayscale(80%);
+.image > img{
+    padding: 100px;
+    filter: grayscale(50%);
+    transform-origin: center;
     transition: filter 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
-.image:hover{
+.image:hover > img{
     filter: grayscale(0%);
+    transform: scale(1.2);
 }
