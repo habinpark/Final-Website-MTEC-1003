@@ -112,6 +112,10 @@ div.stuff {
     border-color: black;
     /* float: center; */
     padding: 10px;
+    -moz-box-shadow: inset 0 0 10px #000000;
+    -webkit-box-shadow: inset 0 0 10px #000000;
+    box-shadow: inset 0 0 10px #000000;
+
 }
 
 div#first {
